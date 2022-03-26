@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>The Neptune Times</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+		<script src="https://kit.fontawesome.com/10ce2848b1.js" crossorigin="anonymous"></script>
+
+
+
+    </head>
+    <body>
+        <!-- Responsive navbar-->
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <nav id="navbar" class="">
+          <div class="nav-wrapper">
+            <!-- Navbar Logo -->
+            <div class="logo">
+              <!-- Logo Placeholder for Inlustration -->
+              <a href="index.html" class="text-decoration-none text-dark"><i class="fa-solid fa-lines-leaning text-decoration-none"></i> The Neptune Times</a>
+            </div>
+
+            <!-- Navbar Links -->
+            <ul id="menu">
+              <li><a href="sub.html">Subscribe</a></li>
+              <li><a href="contact.html" class="text-decoration-none text-dark">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+
+
+        <!-- Menu Icon -->
+        <div class="menuIcon">
+          <span class="icon icon-bars"></span>
+          <span class="icon icon-bars overlay"></span>
+        </div>
+
+
+        <div class="overlay-menu">
+          <ul id="menu">
+              <li><a href="sub.html" class="text-dark">Subscribe</a></li>
+              <li><a href="contact.html" class="text-dark">Contact</a></li>
+            </ul>
+        </div>
+
+
+        <!-- Page Content -->
+        <div class="container px-4 px-lg-5 py-5">
+            <div class="row">
+                <div class="col-lg py-5">
+                    <div class="contact-info">
+                    <h1>We are here for you!</h1>
+                        <p>Find information about our coverage, products, subscriptions and more.</p>
+                        <p>If you need help with your subscription or account, please leave a message at the contact us form, we'll get back to you as soon as possible.
+                        Customer service is available 24 hours.</p><br>
+                        <h4><i class="fa-solid fa-phone fa-xl"></i> +7059 0183 462 834</h4><br>
+                        <h4><i class="fa-regular fa-envelope fa-xl"></i> service@nepetune.com</h4>  <br>
+                        <h4><i class="fa-solid fa-earth-asia fa-xl"></i> 221B Baker Street, Dist. 602, Neptune</h4>
+                    </div>           
+                </div>
+                <div class="col-lg py-5">
+                        <div class="contact">
+                            <h2 style="text-align: center;">Contact us</h2>
+                                <form class="cf"> <!--it should link to php to process and save the input but I didn't not setting up the server side, so it's more like a demenstration only-->
+                                      <div class="half left cf">
+                                            <input type="text" id="input-name" placeholder="Name"><br>
+                                            <input type="email" id="input-email" placeholder="Email address"><br>
+                                            <input type="text" id="input-subject" placeholder="Subject"><br>
+                                            <input type="text" id="input-message" placeholder="Message"> 
+                                       </div>  
+                                  <input type="submit" value="Submit" id="input-submit">
+                                </form>
+                         </div>
+                 </div>
+        </div>
+
+
+        <button class="open-button btn btn-primary" onclick="openForm()">Login here</button>
+
+        <div class="form-popup" id="myForm">
+              <form action="/action_page.php" class="form-container">
+                <h1>Login</h1>
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <button type="submit" class="btn">Login</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+              </form>
+        </div>
+
+        <script>
+        /* navbar js */
+           let menuIcon = document.querySelector('.menuIcon');
+           let nav = document.querySelector('.overlay-menu');
+
+            menuIcon.addEventListener('click', () => {
+                if (nav.style.transform != 'translateX(0%)') {
+                    nav.style.transform = 'translateX(0%)';
+                    nav.style.transition = 'transform 0.2s ease-out';
+                } else { 
+                    nav.style.transform = 'translateX(-100%)';
+                    nav.style.transition = 'transform 0.2s ease-out';
+                }
+            });
+
+
+            // Toggle Menu Icon ========================================
+            let toggleIcon = document.querySelector('.menuIcon');
+
+            toggleIcon.addEventListener('click', () => {
+                if (toggleIcon.className != 'menuIcon toggle') {
+                    toggleIcon.className += ' toggle';
+                } else {
+                    toggleIcon.className = 'menuIcon';
+                }
+            });
+             
+            /* floating login js */
+            function openForm() {
+              document.getElementById("myForm").style.display = "block";
+            }
+
+            function closeForm() {
+              document.getElementById("myForm").style.display = "none";
+            }
+        </script>
+
+
+        
+         
+
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container px-4 px-lg-5"><p class="m-0 text-center text-white">Copyright &copy; 2022 The Neptune Times. All Rights Reserved.<br>
+                <a href="#" alt="fb" class="fa fa-facebook text-decoration-none"></a>
+                <a href="#" alt="ig" class="fa fa-instagram text-decoration-none"></a>
+                <a href="#" alt="twitter" class="fa fa-twitter text-decoration-none"></a></p>
+            </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        
+        <!-- Carousel JS ver4.0.0 -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+        <!-- Why only add this version would work, not the 5.1.3 bundle-->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> 
+    </body>
+</html>
